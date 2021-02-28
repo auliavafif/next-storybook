@@ -2,7 +2,7 @@ import React from "react";
 import { Meta } from "@storybook/react/types-6-0";
 import { Story } from "@storybook/react";
 import Tag from "./Tag";
-import { TagProps } from "types";
+import { TagProps } from "../types";
 
 
 
@@ -20,4 +20,11 @@ export default {
 } as Meta;
 
 
-export const Primary = () => <Tag  {...tag} handleRemoveTag={() => {}}/>
+const Template: Story<TagProps> = (args) => <Tag {...args} />;
+
+// Reuse that template for creating different stories
+export const Primary = Template.bind({});
+Primary.args = { ...tag, handleRemoveTag: () => {} };
+Primary.decorators = [
+  (Story) => <div ><Story /></div>
+]

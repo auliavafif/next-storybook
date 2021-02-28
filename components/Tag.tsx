@@ -7,7 +7,6 @@ import styles from './tag.module.scss';
  * Tag component
  */
 const Tags = (props: TagProps) => {
-  const hexColor =  hexToRgba(props.color)
   const tagStyles = {
     backgroundColor: hexToRgba(props.color, 0.4),
     border: `1px solid ${hexToRgba(props.color, 0.9)}`,
