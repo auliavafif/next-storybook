@@ -117,6 +117,7 @@ export const fetchUserTags = (userUuid) => {
  * @returns {Promise<user>} The updated user model, including the new value for the `tags` array
  */
 export const assignUserTag = (userUuid, tagUuid) => {
+
   return new Promise((resolve) => {
     setTimeout(() => {
       const user = users.find((u) => u.uuid === userUuid);
