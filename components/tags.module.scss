@@ -1,3 +1,78 @@
 .tags{
   display: flex;
+  align-items: center;
+  &__input{
+    border-radius: 15px;
+    background-color: white;
+    margin-top: 5px;
+    border: 2px solid #6D41DD;
+    padding: 5px;
+    font-size: 16px;
+    width: 93%;
+    position: absolute;
+  }
+
+  &__add-button{
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    background: #F1F1F8;
+    color: #A1A1BA;
+    font-size: 25px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 32px;
+    cursor: pointer;
+    display: none;
+    border: 0px
+  }
+
+  &:hover  &__add-button{
+    display: inline-block;
+  }
+
+  &__add-button-label{
+    align-items: center;
+    height: 35px;
+    color: #A1A1BA;
+    font-size: 16px;
+    text-align: center;
+    line-height: 35px;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    padding-left: 10px;
+    border: 0px;
+    margin-left: 5px;
+  }
+
+  &__add-button:hover  &__add-button-label{
+    display: inline-block;
+  }
+
+  &__add-input-button{
+    text-align: left;
+    padding: 5px;
+    background: transparent;
+    border: 1px transparent;
+    display: block;
+    line-height: 22px;
+    font-size: 16px;
+    width: 100%;
+    font-weight: 700;
+    color: #948DB8;
+    cursor: pointer;
+    span{
+      border-radius: 50%;
+      font-size: 16px;
+      line-height: 22px;
+      width: 22px;
+      color: #7B7CA4;
+      text-align: center;
+      background: #F3F3F8;
+      margin-right: 5px;
+      display: inline-block;
+    }
+  }
 }
+

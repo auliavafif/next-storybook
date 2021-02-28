@@ -1,21 +1,30 @@
-// import React from "react";
-// import { Meta } from "@storybook/react/types-6-0";
-// import { Story } from "@storybook/react";
-// import Tags from "./Tags";
-// import { TagsProps } from "types";
+import React from "react";
+import { Meta } from "@storybook/react/types-6-0";
+import { Story } from "@storybook/react";
+import Tags from "./Tags";
+import { TagProps, TagsProps } from "types";
 
-// export default {
-//   title: "Components/Tags",
-//   component: Tags,
-// } as Meta;
+const tags: TagProps[] = [
+  {
+    uuid: "aaaa-bbbb-cccc-dddd",
+    title: "Donor",
+    color: "#ff0000"
+  },
+  {
+    uuid: "eeee-ffff-gggg-hhhh",
+    title: "Fundraiser",
+    color: "#0000FF"
+  }
+];
 
-// // Create a master template for mapping args to render the Button component
-// const Template: Story<TagsProps> = (args) => <Tags {...args} />;
+const userTags = ["aaaa-bbbb-cccc-dddd"]
 
-// // Reuse that template for creating different stories
-// export const Primary = Template.bind({});
-// Primary.args = {
-//   title?: 'Halo';
-//   tags: TagProps[],
-//   selectedTagUuids: TagProps[]
-// }
+export default {
+  title: "Components/Tags",
+  component: Tags,
+} as Meta;
+
+export const Primary = () => <Tags handleCreateTag={() => {}} handleAssignTag={() => {}} handleRemoveTag={() => {}} tags={tags} selectedTagUuids={userTags} title={'Tags'} />;
+Primary.decorators = [
+  (Story) => <div className={`container-card container`} style={{width: '400px'}}><Story /></div>
+]

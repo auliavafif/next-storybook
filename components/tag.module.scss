@@ -3,18 +3,25 @@
   padding: 0.5rem 1rem;
   margin-right: 0.5rem;
   border-radius: 2rem;
-  color: white;
-  border: 1px solid black;
-  cursor: pointer;
+  color: #666295;
+  font-weight: 500;
+  line-height: 18px;
 
   &:hover &__close{
     margin-left: 7px;
     display: inline-block;
+    cursor: pointer;
+    transform: scale(1);
+    font-size: 18px;
   }
 
   &__close{
     margin-left: 7px;
     display: none;
+    font-size: 18px;
+
+    transform: scale(0);
+  transition: transform .4s cubic-bezier(.5,0,.3,1);
   }
 
 }

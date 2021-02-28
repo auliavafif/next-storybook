@@ -39,6 +39,7 @@ const Home = () => {
     const userTagsResponse = await fetchUserTags(user.uuid);
     console.log(userTagsResponse)
     setUserTags(userTagsResponse)
+    console.log(userTags)
     setIsAssigning(false)
     }
   }, [isAssigning, tags, user])
@@ -72,9 +73,9 @@ const Home = () => {
   },[newTag])
 
 
-  return <>
+  return <div className={`container-card container${(isCreating || isAssigning) ? '--isLoading' : ''}`}>
             <Tags handleCreateTag={handleCreateTag} handleAssignTag={handleAssignTag} handleRemoveTag={handleRemoveTag} tags={tags} selectedTagUuids={userTags} title={'Tags'} />
-      </>;
+      </div>;
 };
 
 export default Home;

@@ -1,5 +1,5 @@
 html {
-    background: #f1f1f1;
+    background: white;
     max-width: 100%;
   }
 
@@ -12,4 +12,33 @@ html {
     font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI",
       "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
       "Helvetica Neue", system-ui, sans-serif !important;
+  }
+
+  .flex--center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container-card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    background: white;
+    width: 50%;
+  }
+
+  .container-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+  .container {
+    padding: 30px 16px;
+  }
+
+  .container--isLoading{
+    opacity: 0.5;
+    background-image: url('../public/loading.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 30px 16px;
   }

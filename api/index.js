@@ -24,12 +24,12 @@ const tags = [
   {
     uuid: "aaaa-bbbb-cccc-dddd",
     title: "Donor",
-    color: "red"
+    color: "#ff0000"
   },
   {
     uuid: "eeee-ffff-gggg-hhhh",
     title: "Fundraiser",
-    color: "blue"
+    color: "#0000FF"
   }
 ];
 
