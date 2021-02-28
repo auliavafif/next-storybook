@@ -8,12 +8,14 @@ const tags: TagProps[] = [
   {
     uuid: "aaaa-bbbb-cccc-dddd",
     title: "Donor",
-    color: "#ff0000"
+    color: "#ff0000",
+    handleRemoveTag: () => {}
   },
   {
     uuid: "eeee-ffff-gggg-hhhh",
     title: "Fundraiser",
-    color: "#0000FF"
+    color: "#0000FF",
+    handleRemoveTag: () => {}
   }
 ];
 

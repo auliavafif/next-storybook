@@ -8,7 +8,7 @@ export interface TagProps {
     color: string
     title: string
     uuid: string,
-    handleRemoveTag?: Function
+    handleRemoveTag: Function
 }
 
 
